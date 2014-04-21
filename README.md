@@ -1,4 +1,4 @@
-# future.rb
+# future.rb ![](https://api.travis-ci.org/charliesome/future.rb.svg)
 
 A simple concurrent [futures](https://en.wikipedia.org/wiki/Futures_and_promises) library for Ruby.
 
