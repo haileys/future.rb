@@ -1,4 +1,5 @@
-require_relative "lib/future"
+$:.unshift File.expand_path("../lib", __FILE__)
+require "future"
 
 Gem::Specification.new do |s|
   s.name = "future.rb"
