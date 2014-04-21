@@ -17,4 +17,21 @@ class TestFuture < MiniTest::Test
       Future { 789 },
     ]).value
   end
+
+  def test_to_s_running
+    fut = Future { sleep }
+    assert_equal "#<Future (incomplete)>", fut.to_s
+  end
+
+  def test_to_s_complete
+    fut = Future { 123 }
+    fut.value
+    assert_equal "#<Future value=123>", fut.to_s
+  end
+
+  def test_to_s_errored
+    fut = Future { raise }
+    fut.value rescue nil
+    assert_equal "#<Future (errored)>", fut.to_s
+  end
 end
