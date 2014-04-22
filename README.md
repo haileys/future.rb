@@ -13,15 +13,15 @@ def fetch_url(url)
 end
 
 def crawl_urls(urls)
-  Future.all(urls.map {
+  Future.all(urls.map { |url|
     fetch_url(url)
   })
 end
 
 results = crawl_urls([
-  "http://google.com/",
-  "http://twitter.com/",
-  "http://github.com/",
+  "https://google.com/",
+  "https://twitter.com/",
+  "https://github.com/",
 ]).value
 ```
 
