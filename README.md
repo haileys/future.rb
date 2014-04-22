@@ -13,7 +13,7 @@ def fetch_url(url)
 end
 
 def crawl_urls(urls)
-  Future.all(urls.map {|url|
+  Future.all(urls.map { |url|
     fetch_url(url)
   })
 end
