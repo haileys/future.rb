@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    future.rb (0.0.1)
+    future.rb (1.0.0)
 
 GEM
   remote: https://rubygems.org/
